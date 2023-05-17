@@ -11,22 +11,22 @@ import android.graphics.Paint.Style;
 import android.graphics.RectF;
 import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Pair;
 import android.util.TypedValue;
 
-import java.util.HashSet;
+import java.util.HashMap;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Queue;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Handler;
 
 import org.tensorflow.lite.examples.detection.env.BorderedText;
 import org.tensorflow.lite.examples.detection.env.ImageUtils;
 import org.tensorflow.lite.examples.detection.env.Logger;
 import org.tensorflow.lite.examples.detection.tflite.Classifier.Recognition;
-import org.w3c.dom.Text;
 
 /** A tracker that handles non-max suppression and matches existing objects to new detections. */
 public class MultiBoxTracker {
@@ -57,7 +57,8 @@ public class MultiBoxTracker {
   private final Paint boxPaint = new Paint();
   private final float textSizePx;
   private final BorderedText borderedText;
-  private static String lastStr = null;
+  private static Queue<String> queue = new LinkedList<>();
+  private static HashMap<String, Long> mp =new HashMap<>();
   private Matrix frameToCanvasMatrix;
   private int frameWidth;
   private int frameHeight;
@@ -174,9 +175,20 @@ public class MultiBoxTracker {
 
       logger.v("Result! Frame: " + result.getLocation() + " mapped to screen:" + detectionScreenRect);
 
-      if(lastStr == null || lastStr != result.getTitle()) {
-          lastStr = result.getTitle();
-          textToSpeech.speak(result.getTitle() + " detected", TextToSpeech.QUEUE_ADD, null);
+      Log.d("Object in map", String.valueOf(mp.get(result.getTitle())));
+      if(queue.isEmpty() ||
+              !queue.contains(result.getTitle())
+//              (queue.contains(result.getTitle()) &&
+//                      System.currentTimeMillis()-mp.get(String.valueOf(result.getTitle())) > 5)
+      ){
+        queue.add(result.getTitle());
+//        Log.d("calendar get instance",String.valueOf(System.currentTimeMillis()));
+//        mp.put(String.valueOf(result.getTitle()), System.currentTimeMillis());
+        textToSpeech.speak(result.getTitle() + " detected", TextToSpeech.QUEUE_ADD, null);
+        if(queue.size()>3) {
+          String rem = queue.poll();
+//          mp.remove(rem);
+        }
       }
 
       screenRects.add(new Pair<Float, RectF>(result.getConfidence(), detectionScreenRect));

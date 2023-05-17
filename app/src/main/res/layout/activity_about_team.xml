@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="ABOUT OUR TEAM"
+        android:text="Team SmartSight"
         android:textSize="24sp"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
@@ -35,28 +39,29 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center">
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="100dp"
                     android:layout_height="140dp"
                     android:layout_marginTop="7dp"
                     android:layout_marginStart="15dp"
-                    android:src="@drawable/visionai"
-                    app:border_width="2dp"
+                    android:src="@drawable/sandesh"
+                    app:border_width="0dp"
                     app:border_color="#FFFF"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Dr. Asmita Moghe"
+                    android:text="Sandesh Jain"
                     android:layout_marginTop="5dp"
                     android:textAlignment="center"
                     android:textSize="14sp"
+                    android:layout_marginLeft="10dp"
                     android:textColor="@color/black"
                     />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="HOD IT DEPARTMENT"
+                    android:text="Developer"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:textSize="11sp"
@@ -77,20 +82,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center">
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="100dp"
                     android:layout_height="140dp"
                     android:layout_marginTop="7dp"
                     android:layout_marginStart="15dp"
-                    android:src="@drawable/visionai"
+                    android:src="@drawable/rajat"
                     app:border_width="2dp"
                     app:border_color="#FFFF"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Dr. Asmita Moghe"
+                    android:text="Rajat Bhaskare"
                     android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
                     android:textAlignment="center"
                     android:textSize="14sp"
                     android:textColor="@color/black"
@@ -98,7 +104,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="HOD IT DEPARTMENT"
+                    android:text="Developer"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:textSize="11sp"
@@ -119,20 +125,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center">
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="100dp"
                     android:layout_height="140dp"
                     android:layout_marginTop="7dp"
                     android:layout_marginStart="15dp"
-                    android:src="@drawable/visionai"
+                    android:src="@drawable/urvashi"
                     app:border_width="2dp"
                     app:border_color="#FFFF"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Dr. Asmita Moghe"
+                    android:text="Urvashi Bansal"
                     android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
                     android:textAlignment="center"
                     android:textSize="14sp"
                     android:textColor="@color/black"
@@ -140,7 +147,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="HOD IT DEPARTMENT"
+                    android:text="Content Writer"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:textSize="11sp"
@@ -161,20 +168,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center">
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="100dp"
                     android:layout_height="140dp"
                     android:layout_marginTop="7dp"
                     android:layout_marginStart="15dp"
-                    android:src="@drawable/visionai"
+                    android:src="@drawable/mitali"
                     app:border_width="2dp"
                     app:border_color="#FFFF"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Dr. Asmita Moghe"
+                    android:text="Mitali Gandhi"
                     android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
                     android:textAlignment="center"
                     android:textSize="14sp"
                     android:textColor="@color/black"
@@ -182,7 +190,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="HOD IT DEPARTMENT"
+                    android:text="Content Writer"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:textSize="11sp"
@@ -203,19 +211,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center">
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="100dp"
                     android:layout_height="140dp"
                     android:layout_marginTop="7dp"
                     android:layout_marginStart="15dp"
-                    android:src="@drawable/visionai"
+                    android:src="@drawable/yomesh"
                     app:border_width="2dp"
                     app:border_color="#FFFF"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Dr. Asmita Moghe"
+                    android:layout_marginLeft="15dp"
+                    android:text="Yomesh Jain"
                     android:layout_marginTop="5dp"
                     android:textAlignment="center"
                     android:textSize="14sp"
@@ -224,49 +233,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="HOD IT DEPARTMENT"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:textSize="11sp"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    />
-            </LinearLayout>
-
-
-        </com.google.android.material.card.MaterialCardView>
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="18dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="100dp"
-                    android:layout_height="140dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginStart="15dp"
-                    android:src="@drawable/visionai"
-                    app:border_width="2dp"
-                    app:border_color="#FFFF"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Dr. Asmita Moghe"
-                    android:layout_marginTop="5dp"
-                    android:textAlignment="center"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="HOD IT DEPARTMENT"
+                    android:text="UI Designer"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:textSize="11sp"
@@ -280,3 +247,4 @@
     </GridLayout>
 
 </LinearLayout>
+</ScrollView>

@@ -27,10 +27,10 @@ public class HomeActivity extends AppCompatActivity {
         ImageSlider imageSlider=findViewById(R.id.slider);
         List<SlideModel> slideModels=new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.visionai, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.visionai, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.visionai, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.visionai, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.visionai, ScaleTypes.FIT));
+//        slideModels.add(new SlideModel(R.drawable.visionai, ScaleTypes.FIT));
+//        slideModels.add(new SlideModel(R.drawable.visionai, ScaleTypes.FIT));
+//        slideModels.add(new SlideModel(R.drawable.visionai, ScaleTypes.FIT));
+//        slideModels.add(new SlideModel(R.drawable.visionai, ScaleTypes.FIT));
         imageSlider.setImageList(slideModels,ScaleTypes.CENTER_CROP);
 
         camera_button=findViewById(R.id.camera_button);
